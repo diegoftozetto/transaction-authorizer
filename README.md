@@ -61,9 +61,9 @@ A seguir temos um diagrama da estutura do projeto, seguindo o padrão MVC (Model
 - **Repository:** A camada de repositório é responsável por interagir diretamente com o banco de dados, realizando operações por meio das classes DAO.
 - **Model:** Contém as classes DAO, que executam as operações de banco de dados e mapeiam os dados para objetos.
 
-### Diagrama de ER
+### DER (Diagrama de Entidade e Relacionamento)
 
-O diagrama de entidade e relacionamento (ER) ilustra a estrutura do banco de dados, onde cada transação é registrada na tabela `tb_transaction`. A tabela `tb_balance` mantém o saldo total por categoria e conta. As tabelas `tb_account`, `tb_category`, `tb_mcc` e `tb_merchant` armazenam detalhes das contas, categorias, códigos MCC e comerciantes, respectivamente, com chaves estrangeiras interligando essas tabelas para garantir a integridade referencial e facilitar a manutenção dos dados financeiros.
+O Diagrama de Entidade e Relacionamento (DER) ilustra a estrutura do banco de dados, onde cada transação é registrada na tabela `tb_transaction`. A tabela `tb_balance` mantém o saldo total por categoria e conta. As tabelas `tb_account`, `tb_category`, `tb_mcc` e `tb_merchant` armazenam detalhes das contas, categorias, códigos MCC e comerciantes, respectivamente, com chaves estrangeiras interligando essas tabelas para garantir a integridade referencial e facilitar a manutenção dos dados financeiros.
 
 ![ER Diagrama](docs/images/er-diagram.png)
 
@@ -74,7 +74,7 @@ Descrição das Tabelas e Relacionamentos:
   - **amount:** Valor da transação.
   - **account_id:** Chave estrangeira que referencia a conta (**tb_account**).
   - **category_id:** Chave estrangeira que referencia a categoria (**tb_category**).
-  - **mcc_id:** Chave estrangeira que referencia o código MCC (**tb_mcc**).
+  - **mcc_id:** Chave estrangeira que referencia o MCC (**tb_mcc**).
   - **merchant_id:** Chave estrangeira que referencia o comerciante (**tb_merchant**).
 
 
@@ -97,7 +97,7 @@ Descrição das Tabelas e Relacionamentos:
 
 `tb_merchant`
   - **id:** Identificador único do comerciante;
-  - **mcc_id:** Chave estrangeira que referencia o código MCC (**tb_mcc**);
+  - **mcc_id:** Chave estrangeira que referencia o MCC (**tb_mcc**);
   - **name:** Nome do comerciante.
 
 
@@ -127,4 +127,20 @@ Descrição das Tabelas e Relacionamentos:
 Para rodar os testes unitários basta executar o seguinte comando:
 ```bash
 mvn test
+```
+
+## API
+
+**URL:**
+
+`POST` http://localhost:8080/api/transactions
+
+**BODY:**
+```json
+{
+    "account": "0004848994846",
+    "amount": 100,
+    "merchant": "UBER EATS               SAO PAULO BR",
+    "mcc": "5811"    
+}
 ```
