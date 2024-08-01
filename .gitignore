@@ -35,3 +35,4 @@ build/
 mvnw
 mvnw.*
 .jpb
+docker/data

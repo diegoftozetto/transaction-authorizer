@@ -13,7 +13,7 @@ INSERT INTO tb_balance (id, total_amount, category_id, account_id) VALUES(1, 10,
 INSERT INTO tb_balance (id, total_amount, category_id, account_id) VALUES(2, 10, 2, 1);
 INSERT INTO tb_balance (id, total_amount, category_id, account_id) VALUES(3, 100, 3, 1);
 
-INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(1, 'UBER TRIP                   SAO PAULO BR', 2);
-INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(2, 'UBER EATS                   SAO PAULO BR', 1);
-INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(3, 'PAG*JoseDaSilva          RIO DE JANEI BR', 3);
-INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(4, 'PICPAY*BILHETEUNICO           GOIANIA BR', 4);
+INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(1, 'UBER TRIP SAO PAULO BR', 2);
+INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(2, 'UBER EATS SAO PAULO BR', 1);
+INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(3, 'PAG*JoseDaSilva RIO DE JANEI BR', 3);
+INSERT INTO tb_merchant (id, "name", mcc_id) VALUES(4, 'PICPAY*BILHETEUNICO GOIANIA BR', 4);
