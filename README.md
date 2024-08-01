@@ -138,9 +138,9 @@ mvn test
 **BODY:**
 ```json
 {
-    "account": "0004848994846",
-    "amount": 100,
-    "merchant": "UBER EATS               SAO PAULO BR",
-    "mcc": "5811"    
+  "account": "000078956984567",
+  "amount": 5,
+  "merchant": "PADARIA DO ZE               SAO PAULO BR",
+  "mcc": "5411"
 }
 ```
